@@ -9,7 +9,8 @@ const { executors, script, filter } = args.reduce((acc, pair) => {
     acc[key] = value;
     return acc;
 }, {});
-/* get list of all .feature files based on script (prod or test) */
+
+/* get list of all .spec files based on npm script */
 let specs = glob
     .sync('cypress/integration/**/*.spec.js')
     .filter(specPath =>
@@ -17,6 +18,7 @@ let specs = glob
             ? specPath
             : specPath.includes(filter)
     );
+
 process.stdout.write(
     `Running cypress in parallel with ${executors} executors\n`
 );
@@ -63,4 +65,5 @@ const chainer = () => {
 /* create array of executors */
 let chains = Array.from({ length: executors }, chainer);
 
+/* run executors */
 Promise.all(chains);
