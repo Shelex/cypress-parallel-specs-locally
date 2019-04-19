@@ -1,0 +1,51 @@
+{
+    "root": true,
+    "extends": [
+          "prettier",
+          "plugin:cypress/recommended"
+        ],
+        "rules": {
+            "prettier/prettier": [
+                "error",
+                {
+                    "singleQuote": true
+                }
+            ],
+            "prefer-template": "error",
+            "curly": ["error", "all"],
+            "no-restricted-globals": "off",
+            "no-restricted-syntax": [
+                "error",
+                "DebuggerStatement",
+                "LabeledStatement",
+                "WithStatement"
+            ],
+            "import/prefer-default-export": "off",
+            "no-continue": "off",
+            "no-plusplus": "off",
+            "no-await-in-loop": "off",
+            "no-trailing-spaces":"warn",
+            "no-template-curly-in-string":"error",
+            "no-unused-vars": [
+                "warn", 
+                { 
+                  "vars": "all",
+                  "varsIgnorePattern": "[$]",
+                  "args": "none" 
+                }
+            ],
+            "no-shadow": "off",
+            "import/no-named-as-default": "off",
+            "prefer-destructuring": "off",
+            "no-console": "warn"
+        },    
+    "plugins": ["prettier", "cypress", "chai-friendly"],
+    "globals": {
+        "cy": true,
+        "Cypress": true,
+        "__OOS_CONF__": true
+    },
+    "env": {
+        "cypress/globals": true
+    }
+}

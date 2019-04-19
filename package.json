@@ -1,0 +1,26 @@
+{
+  "name": "cypress-parallel-specs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --config video=false",
+    "delete:reports": "rm cypress/results/* || true",
+    "prereport": "yarn delete:reports",
+    "report:merge": "mochawesome-merge --reportDir cypress/results > mochawesome.json",
+    "report:generate": "marge mochawesome.json",
+    "postreport": "npm run report:merge && npm run report:generate",
+    "cy:run:parallel": "node cypress/scripts/parallel executors=2 script=cy:run",
+    "cy:run:parallel:empty": "node cypress/scripts/parallel executors=5 script=cy:run filter=empty"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^3.1.5",
+    "eslint": "^5.16.0",
+    "eslint-plugin-cypress": "^2.2.1",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.2",
+    "mochawesome-merge": "^1.0.7",
+    "mochawesome-report-generator": "^3.1.5"
+  }
+}
