@@ -1,4 +1,4 @@
-# cypress-parallel-specs
+# cypress-parallel-specs-locally
 Script for parallel Cypress specs execution locally - [parallel.js](cypress/scripts/parallel.js)
 
 Arguments:  
