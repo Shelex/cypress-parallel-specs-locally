@@ -7,6 +7,9 @@ Arguments:
 `filter` = filtering specs path by keyword;  
 
 How to run:  
+```yarn cy:run:parallel:empty```
+
+How to run with mochawesome report:
 1. ```yarn prereport```
 2. ```yarn cy:run:parallel:empty```
 3. ```yarn postreport```
