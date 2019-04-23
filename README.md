@@ -8,7 +8,7 @@ Arguments:
 
 How to run:  
  - ```yarn cy:run:parallel:empty``` - with filtering
- - ```yarn cy:run:parallel:empty``` - all specs
+ - ```yarn cy:run:parallel``` - all specs
 
 How to run with mochawesome report:
  -  ```yarn prereport```
