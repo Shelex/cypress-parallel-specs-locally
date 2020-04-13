@@ -7,7 +7,7 @@
     "cy:run": "cypress run --config video=false",
     "delete:reports": "rm cypress/results/* || true",
     "prereport": "yarn delete:reports",
-    "report:merge": "mochawesome-merge --reportDir cypress/results > mochawesome.json",
+    "report:merge": "npx mochawesome-merge cypress/results/mochawesome*.json > mochawesome.json",
     "report:generate": "marge mochawesome.json",
     "postreport": "npm run report:merge && npm run report:generate",
     "cy:run:parallel": "node cypress/scripts/parallel executors=2 script=cy:run",
@@ -15,12 +15,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^3.4.0",
+    "cypress": "^4.3.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-cypress": "^2.8.1",
-    "mocha": "^5.2.0",
-    "mochawesome": "^4.1.0",
-    "mochawesome-merge": "^4.0.0",
-    "mochawesome-report-generator": "^4.1.0"
+    "eslint-plugin-cypress": "^2.10.3",
+    "mocha": "^7.1.1",
+    "mochawesome": "^6.0.0",
+    "mochawesome-merge": "^4.0.3",
+    "mochawesome-report-generator": "^5.0.0"
   }
 }
