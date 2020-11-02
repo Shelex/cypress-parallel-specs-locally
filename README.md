@@ -3,10 +3,10 @@ Script for parallel Cypress specs execution locally - [parallel.js](cypress/scri
 
 Arguments:  
 `executors` = number of chainers which are picking specs to run;  
-`script` = npm script to fire cypress(configs, envs, etc. could be passed here);  
 `filter` = filtering specs path by keyword;  
 
 How to run:  
+ - ```yarn cy:run``` - single executor
  - ```yarn cy:run:parallel:empty``` - with filtering
  - ```yarn cy:run:parallel``` - all specs
 

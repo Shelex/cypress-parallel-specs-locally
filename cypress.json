@@ -1,10 +1,11 @@
 {
     "chromeWebSecurity": false,
-    "reporter": "mochawesome",
     "reporterOptions": {
+      "reporterEnabled": "mochawesome",
       "reportDir": "cypress/results",
       "overwrite": false,
       "html": false,
       "json": true
-    }
+    },
+    "restartBrowserBetweenSpecFiles": true
   }

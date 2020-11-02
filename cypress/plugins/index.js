@@ -13,30 +13,16 @@
 
 //const cucumber = require('cypress-cucumber-preprocessor').default;
 module.exports = (on, config) => {
-    on('before:browser:launch', (browser = {}, args) => {
+    on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser.name === 'chrome') {
-            args.push(
+            launchOptions.args.push(
                 '--disable-site-isolation-trials',
                 '--start-maximized',
                 '--disable-notifications',
                 '--disable-background-mode'
             );
-            return args;
+            return launchOptions;
         }
     });
-    on('window:load', win => {
-        win.open = (url, target, features) => {
-            Cypress.log({
-                name: 'BLOCK_TAB',
-                message: `url=${url}`,
-                consoleProps: () => {
-                    return {
-                        url: url,
-                        target: target,
-                        features: features
-                    };
-                }
-            });
-        };
-    });
+    return config
   }

@@ -12,10 +12,38 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-require('cypress-plugin-retries');
+
 // Import commands.js using ES2015 syntax:
 import './commands'
 
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+before(() => {
+    if (Cypress.env('setupSuite')) {
+        cy.log(`THIS IS GLOBAL BEFORE HOOK EXECUTED ONCE`)
+    }
+})
+
+after(() => {
+    if (Cypress.env('teardownSuite')) {
+        cy.log(`THIS IS GLOBAL BEFORE HOOK EXECUTED ONCE`)
+    }
+})
+
+Cypress.on('window:before:load', win => {
+    win.open = (url, target, features) => {
+        Cypress.log({
+            name: 'BLOCK_TAB',
+            message: `url=${url}`,
+            consoleProps: () => {
+                return {
+                    url: url,
+                    target: target,
+                    features: features
+                };
+            }
+        });
+    };
+});
