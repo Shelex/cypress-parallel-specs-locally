@@ -5,13 +5,16 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "node cypress/scripts/runner",
+    "cy:run_v2": "node cypress/scripts/runner_v2",
     "delete:reports": "rm cypress/results/* || true",
     "prereport": "yarn delete:reports",
     "report:merge": "npx mochawesome-merge cypress/results/mochawesome*.json > mochawesome.json",
     "report:generate": "marge mochawesome.json",
     "postreport": "npm run report:merge && npm run report:generate",
     "cy:run:parallel": "node cypress/scripts/runner executors=2",
-    "cy:run:parallel:empty": "node cypress/scripts/runner executors=5 filter=empty"
+    "cy:run_v2:parallel": "node cypress/scripts/runner_v2 executors=2",
+    "cy:run:parallel:empty": "node cypress/scripts/runner executors=2 filter=empty",
+    "cy:run_v2:parallel:empty": "node cypress/scripts/runner_v2 executors=2 filter=empty"
   },
   "license": "MIT",
   "devDependencies": {
