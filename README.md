@@ -1,9 +1,9 @@
 # cypress-parallel-specs-locally
 Script for parallel Cypress specs execution locally: 
  - runnner_v1 is a pool of promises with recursion - [runner.js](cypress/scripts/runner.js)
- - runner_v2 is an event based runner with state - [runner_v2.js](cypress/scripts/runner_v2.js)
+ - runner_v2 is an event based runner with state - [runner_v2.js](cypress/scripts/runner_v2.js), for node 12+  
 
-Runner v2 tries to solve an issue with several Cypress xvfb instances spawned at same time and fighting for same resource causing skipping some suites. Now a parameter `interval` could be configured, which blocks new instance from spawning cypress if timeout from previous start has not finished. Value of `interval` should be some +/- average time between starting cypress and opened browser, and it depends on your test suite size and available machine resources.
+Runner v2 tries to solve an issue with several Cypress xvfb instances spawned at same time and fighting for same resource causing skipping some suites. Now a parameter `timeout` could be configured, which blocks new instance from spawning cypress if timeout from previous start has not finished. Value of `timeout` should be some +/- average time between starting cypress and opened browser, and it depends on your test suite size and available machine resources.
 
 
 

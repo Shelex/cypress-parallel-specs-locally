@@ -69,10 +69,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@shelex/promise-queue-timeout@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@shelex/promise-queue-timeout/-/promise-queue-timeout-1.0.1.tgz#35e2eca59e3f619de34f2f495dbd2ff7d2211a19"
-  integrity sha512-V2J4gzP3Aqxp2AhmXNzVFYUjluFAQhhQGfpcRz6IrelGIx0mbkwjj+XgG9hbgQ0vubGV0k68tRnNSF1z7KkItA==
+"@shelex/promise-queue-timeout@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@shelex/promise-queue-timeout/-/promise-queue-timeout-1.0.3.tgz#b8a2485a7fe2eaad842d44eb424b37f7a5c8d843"
+  integrity sha512-aVmNNGLDLmOENJ4NhFhS1h8UAhKyb/3p6kg9nGvVEJ7FH7EenpUjXMMUWmrNXZaVIVfJ0aN51YW9rLI2apwXfA==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"

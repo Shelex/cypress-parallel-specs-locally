@@ -58,7 +58,7 @@ runner.on('reject', (err) => {
   process.exitCode += 1;
 })
 
-runner.on('starting_spec', (spec, specsCount) => {
+runner.on('starting_task', (spec, specsCount) => {
   console.log(
     `starting ${spec}, ${initialSpecsCount -
       specsCount + 1}/${initialSpecsCount}`,
