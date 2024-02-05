@@ -116,10 +116,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@shelex/parallel-specs-client@^1.9.0":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@shelex/parallel-specs-client/-/parallel-specs-client-1.9.0.tgz#626f5d82ab8f0fc9209df8c5503a261636731e08"
-  integrity sha512-ps9zl7HzBZXC/0Z0yq5MtBRJ+fjH8L6aUX89ko49ObpofVpIDWIe/BUlEE0cYT+D7iJ03HJPxK+CMtoIQq8w7g==
+"@shelex/parallel-specs-client@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@shelex/parallel-specs-client/-/parallel-specs-client-1.9.1.tgz#375430b69138527b520a9c515373ed8d69b997c4"
+  integrity sha512-ysd6jMPAsEPdEW+e3OMS9oStIy8tonn1gCQA80kZ6E4Tzo+jeul4mk/uMRuu+ImVF7/zcJmBUBrC7fKAW2N2Gw==
   dependencies:
     commander "9.3.0"
     fast-glob "3.3.2"
