@@ -13,7 +13,7 @@ Each script supports arguments:
 
 # Scripts
 
-## `runner_recursive`
+## runner_recursive
 
 Is a pool of promises using recursion - [runner_recursive.js](cypress/scripts/runner_recursive.js)
 
@@ -23,7 +23,7 @@ Is a pool of promises using recursion - [runner_recursive.js](cypress/scripts/ru
 -   `yarn cy:run:recursive:parallel:empty` - with filtering
 -   `yarn cy:run:recursive:parallel` - all specs
 
-## `runner_queue`
+## runner_queue
 
 Is an event based runner with queue - [runner_queue.js](cypress/scripts/runner_queue.js). Node v12+ is required.
 
@@ -35,7 +35,7 @@ Is an event based runner with queue - [runner_queue.js](cypress/scripts/runner_q
 -   `yarn cy:run:queue:parallel:empty` - with filtering
 -   `yarn cy:run:queue:parallel` - all specs
 
-## `runner_recursive_service`
+## runner_recursive_service
 
 Is basically a `runner_recursive` but handles spec files with external [parallel-specs](https://github.com/Shelex/parallel-specs) service to distribute spec files across processes - [runner_recursive_service.js](cypress/scripts/runner_recursive_service.js)
 
