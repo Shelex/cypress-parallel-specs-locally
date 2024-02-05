@@ -61,6 +61,8 @@ typings/
 .next
 
 # Cypress.io
+cypress/fixtures
+cypress/downloads
 cypress/screenshots
 cypress/videos
 cypress/results

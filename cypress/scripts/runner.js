@@ -13,7 +13,7 @@ process.exitCode = 0;
 
 /* get list of all .spec files*/
 let specs = glob
-    .sync('cypress/integration/**/*.spec.js')
+    .sync('cypress/e2e/**/*.cy.js')
     .filter(specPath =>
         typeof filter === 'undefined'
             ? specPath

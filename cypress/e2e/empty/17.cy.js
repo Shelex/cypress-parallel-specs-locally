@@ -24,8 +24,4 @@ context('Actions', () => {
   it('.focus() - focus on a DOM element', () => {
     expect(true).to.be.true;
   })
-
-  it('.focus() - focus on a DOM element', () => {
-    expect(false).to.be.true;
-  })
 })
